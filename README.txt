@@ -1,3 +1,5 @@
+Extension Drupal 7.x theme based on Acquia Prosper
+
 -- SUMMARY --
 
 Acquia Prosper is an advanced Drupal theme, with a monochromatic look and clean lines.
