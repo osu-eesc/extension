@@ -2,11 +2,7 @@
 /* Add only Color CSS. 									*/
 /* For example: color, background, border, 				*/
 /*		list-style, cursor, outline   					*/
-
 html {
-	background: #FFF;
-}
-#html-alpha { 
 	background: #000 !important;
 }
 body {
@@ -19,16 +15,16 @@ body {
 h2, h3, h4, h5 {
 	color: #494949;
 }
-#content-inner blockquote {
-    /*background: url("images/blockquote-quote.png") no-repeat scroll 8px 8px #ECECEC;
-    border: 1px solid #D8D8D8;
-    color: #6A6A6A;*/
-}
+
+
+
+
+
 
 
 /* sidebar titles */
 #sidebar-first h2.title,
-#sidebar-last h2.title,
+#sidebar-second h2.title,
 h2.block-title,
 h2.block-title-inner { 
 	color: #494949;
@@ -45,7 +41,7 @@ h2.block-title-inner {
 .page-sidebar-first {
 	background: url('../images/extension/png/lay_bg_sbl.png');
 }
-.page-sidebar-last {
+.page-sidebar-second {
 	background: url('../images/extension/png/lay_bg_sbr.png');
 }
 .page-sidebar-none {
@@ -133,19 +129,18 @@ a {
 
 /* Primary Menu
 /-------------------------------------------------------------- */
-#header-primary-menu-inner {
+#header-main-menu-inner {
 	background: url('../images/extension/png/lay_hdr_nav.png') no-repeat;
 }
 .front .ext-home-special {
 	background: url('../images/extension/png/lay_hdr_nav_home.png') no-repeat !important;
 }
-.header-primary-menu-wrapper {
+.header-main-menu-wrapper {
 	background: none;
 	border: none;
 }
-#block-menu-primary-links .menu {
-}	
-#block-menu-primary-links .menu li {
+
+#primary-menu .menu li {
 	list-style: none;
 }
 
@@ -169,6 +164,15 @@ a {
 .sf-menu li.expanded {
 	color: #fff;
 }
+
+.sf-menu li ul {
+  background: #F4F4F4 !important;
+}
+
+.sf-menu ul {
+  margin: 0;
+}
+
 #primary-menu-inner li.expanded ul.menu li.leaf, #primary-menu-inner li.expanded ul.menu li.leaf a {
 	color: #565656;
 	background-color: #F4F4F4 !important;
@@ -200,7 +204,7 @@ a {
 	list-style-image: none;
 }
 #sidebar-first li,
-#sidebar-last li {
+#sidebar-second li {
 	list-style: none;
 }
 
@@ -227,10 +231,10 @@ a {
 #sidebar-first .block {
 	background: url('../images/extension/gif/lay_ilr_horl.gif') bottom right no-repeat;
 }
-#sidebar-last .block {
+#sidebar-second .block {
 	background: url('../images/extension/gif/lay_ilr_horr.gif') bottom left no-repeat;
 }
-#sidebar-first .block.last, #sidebar-last .block.last {
+#sidebar-first .block.last, #sidebar-second .block.last {
 	background: none;
 }
 .block-border-fade-top {

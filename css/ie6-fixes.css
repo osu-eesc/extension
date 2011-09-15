@@ -85,6 +85,7 @@ ul.pager,
 .ext-home-special {
 	background-image: url('../images/extension/png/lay_hdr_nav_home.png') !important;
 }
+
 #primary-menu ul.sf-menu li ul.menu {
   margin-top: 7px;
 }
@@ -213,7 +214,7 @@ ul.pager li.pager-item a:visited {
 .page-sidebar-first {
 	background-image: url('../images/extension/gif/lay_bg_sbl.gif');
 }
-.page-sidebar-last {
+.page-sidebar-second {
 	background-image: url('../images/extension/gif/lay_bg_sbr.gif');
 }
 .page-sidebar-none {
@@ -234,7 +235,7 @@ ul.pager li.pager-item a:visited {
 	margin: auto;
 }
 #header-group-wrapper {
-	margin-left: 40px;
+	margin-left: 22px;
 }
 .primary-menu-inner ul.sf-menu li ul.menu {
  margin-top: 0px !important;
@@ -362,4 +363,16 @@ div.dotted-line {
 }
 #edit-submit-enews {
 	margin-top: 20px;
+}
+
+.grid16-11 {
+  width: 642px;
+}
+
+#content-inner {
+  margin-left: 0;
+}
+
+.content-region {
+  background: none !important;
 }
