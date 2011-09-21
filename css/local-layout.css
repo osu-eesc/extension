@@ -71,7 +71,8 @@ blockquote {
 	z-index:99990; /* fixing admin/OSU tag issue*/
 }
 #header-top {
-	z-index: 3000;	/* fix IE bug - OSU logo */
+	/*z-index: 3000; */	/* fix IE bug - OSU logo */
+	z-index: 500; /* changed z-index so Drupal admin overlay is above logo */
 }
 #header-top-inner {
 	z-index: 1000;  /* fix IE bug - OSU logo */
