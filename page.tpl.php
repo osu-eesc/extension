@@ -61,13 +61,11 @@
         <div id="header-main-menu-wrapper" class="header-main-menu-wrapper full-width">
           <div id="header-main-menu" class="header-main-menu row <?php print $grid_width; ?>">
             <div id="header-main-menu-inner" class="header-main-menu-inner inner clearfix">
-              <?php  // add either extension or AES menu or if custom the primary links menu
-//                  $thisServerPath = '/www/virtual/extension/';
-                  $thisServerPath = '/Users/rosei/Sites/';
-                  $filename = 'primary_links_menu.inc';
-                  $server_path_file_name = $thisServerPath . '/_includes/' . $filename;
-                  if (file_exists($server_path_file_name)) {
-                    include_once($server_path_file_name);
+            
+              <?php  // hack until this is figured out for D7 theme //                  
+                  $filename = 'main_menu.html';
+                  if (file_exists($filename)) {
+                    include_once($filename);
                   } else {
                     print render($page['main_menu']);
                   }
@@ -77,12 +75,6 @@
         </div><!-- /header-primary-menu-wrapper -->
         <?php print render($page['preface_top']); ?>
       </div>
-
-
-
-
-
-
 
 
       <!-- main region: width = grid_width -->

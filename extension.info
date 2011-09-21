@@ -1,6 +1,6 @@
 
 name = Extension
-description = Extension is a branch of the acquia prosper theme.
+description = The Extension is a clone of the Acquia Prosper theme. Requires the <a href="http://drupal.org/project/fusion">Fusion Core</a> base theme and the <a href="http://drupal.org/project/skinr">Skinr</a> module.
 base theme = fusion_core
 core = 7.x
 engine = phptemplate
@@ -48,8 +48,8 @@ settings[theme_grid_options][] = grid12-960
 settings[theme_grid_options][] = grid12-fluid
 settings[fluid_grid_width] = fluid-100
 settings[sidebar_layout] = sidebars-split
-settings[sidebar_first_width] = 3
-settings[sidebar_second_width] = 3
+settings[sidebar_first_width] = 4
+settings[sidebar_second_width] = 5
 settings[theme_font] = none
 settings[theme_font_size] = font-size-13
 settings[breadcrumb_display] = 1
