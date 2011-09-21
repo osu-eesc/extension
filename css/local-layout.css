@@ -54,6 +54,7 @@ blockquote {
 }
 #header-top {
 	width: 968px;
+	margin: auto;
 }
 #header-group-inner, #header-primary-menu-inner {
 	margin-left: 0px;
@@ -67,8 +68,9 @@ blockquote {
 	top: 0;
 	left: 32px;
 }
-#admin-menu, #admin-menu ul {
-	z-index:99990; /* fixing admin/OSU tag issue*/
+#header-top {
+	/*z-index: 3000; */	/* fix IE bug - OSU logo */
+	z-index: 500; /* changed z-index so Drupal admin overlay is above logo */
 }
 #header-top {
 	/*z-index: 3000; */	/* fix IE bug - OSU logo */
@@ -114,9 +116,8 @@ blockquote {
 	text-indent: -999999em;
 }
 .header-logo { /* inside pg: ext logo */
-	left: 150px;
-	top: 41px;
-	position: absolute;
+	margin-left: 150px;
+	margin-top: 41px;
 }
 .header-logo-front { /* front pg: ext logo */
 	left: 152px;
@@ -136,7 +137,6 @@ blockquote {
 #primary-menu-inner {
 	height: 36px;
 	margin-top: 2px !important;
-	margin-left: 30px !important;
 }
 .primary-menu-inner ul.menu li a:link, 
 .primary-menu-inner ul.menu li a:visited,
@@ -145,7 +145,7 @@ blockquote {
 	outline: none;
 }
 .padding-left-10 {
-	padding-left: 10px;  /* Extra padding for sidebar-last */
+	padding-left: 10px;  /* Extra padding for sidebar-second */
 }
 #block-menu-primary-links.block ul  {
 	margin-left: 0;
@@ -168,12 +168,12 @@ blockquote {
 }
 
 .primary-menu-inner ul.sf-menu li ul.menu {
-	margin-top: 0px;
+	margin-top: -4px;
 }
-#sidebar-last > .block {
+#sidebar-second > .block {
 	margin-bottom: 1px;  /* margin under main nav */
 }
-#sidebar-last .block div.inner {
+#sidebar-second .block div.inner {
 	margin-left: 5%;
 }
 #content-tabs ul.secondary {  /* Admin - secondary nav */
@@ -275,11 +275,11 @@ blockquote {
 /* Custom list items 
 /----------------------------------- */
 #sidebar-first ul,
-#sidebar-last ul {
+#sidebar-second ul {
 	margin-left: 0;
 }
 #sidebar-first ul ul,
-#sidebar-last ul ul {
+#sidebar-second ul ul {
 	margin-left: 2em;
 }
 
@@ -313,6 +313,7 @@ div.content-messages-inner div.status {
 /* heading*/
 h1, h1.title {
 	padding-top: 0px;
+	margin-left: 20px;
 }
 /*h3 {
 	margin-bottom: 15px;
@@ -357,27 +358,27 @@ body.node-type-news-issue .content-group row nested grid16-6 {
 /* sidebars 
 #sidebar-first block,
 #sidebar-first block-block,
-#sidebar-last block,
-#sidebar-last block-block { 
+#sidebar-second block,
+#sidebar-second block-block { 
 	padding-left: 0;
 	margin-left:0;
 }
-#sidebar-last block-block {
+#sidebar-second block-block {
 	padding-bottom: 7px;
 }*/
 
 #sidebar-first .block, 
-#sidebar-last .block {
+#sidebar-second .block {
 	padding-bottom: 38px;
 }
 #sidebar-first .block.last, 
-#sidebar-last .block.last {
+#sidebar-second .block.last {
 	padding-bottom: 6px !important;
 }
 #sidebar-first .block > div {
 	margin-left: 20px !important;
 }
-#sidebar-last .block > div {
+#sidebar-second .block > div {
 	margin-left: 25px !important;
 }
 #sidebar-first .grid16-6 .view-content { 
@@ -386,7 +387,7 @@ body.node-type-news-issue .content-group row nested grid16-6 {
 #sidebar-first-inner {
 	margin-left: 0px;
 }
-#sidebar-last .block.grid16-4 {
+#sidebar-second .block.grid16-4 {
 	margin-left: -1px;
 	padding-right: 1px;
 }
@@ -531,7 +532,7 @@ div.story-image-info {
 .not-front.node-type-news-issue #breadcrumbs {
 	display: none;
 }
-#sidebar-last #block-block-1, #sidebar-last #block-block-2, #sidebar-last #block-block-4, #sidebar-last #block-block-19 {
+#sidebar-second #block-block-1, #sidebar-second #block-block-2, #sidebar-second #block-block-4, #sidebar-second #block-block-19 {
 	padding-bottom: 18px;
 }
 /* Contact page
@@ -704,7 +705,7 @@ div#view-id-view_contact_us-page_1.view div.inner div.view-content h3 {
 	list-style-image: none !important;
 	margin-left: 0 !important;
 } 
-#sidebar-first .more-link, #sidebar-last .more-link {
+#sidebar-first .more-link, #sidebar-second .more-link {
 	margin-right: 5px;
 }
 #block-views-f9adae70ed573eb4da3208cf400b90d6 .inner {

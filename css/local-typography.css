@@ -48,7 +48,7 @@ h4, h5 { font-size: 1.1em; font-weight: bold;}
 
 /* sidebar titles */
 #sidebar-first h2.title,
-#sidebar-last h2.title,
+#sidebar-second h2.title,
 h2.block-title,
 h2.block-title-inner { 
 	font-weight: normal;
@@ -127,6 +127,10 @@ h2.block-title-inner {
 	font-size: 12px !important;
 }
 
+.sf-menu li a:hover {
+	text-decoration: none !important;
+}
+
 /* Breadcrumbs
 /-------------------------------------------------------------- */
 .breadcrumb a:link, .breadcrumb a:visited,
@@ -165,10 +169,10 @@ div.views-field-field-community-images-data, div.views-field-field-extension-sto
 .view-extension-story.view-display-id-node_content_1 .field-content, .view-comunity-page-images .field-content {
 	color: #564C46 !important;
 }
-#sidebar-first .view-gallery-photos, #sidebar-last .view-gallery-photos {
+#sidebar-first .view-gallery-photos, #sidebar-second .view-gallery-photos {
 	font-size: 11px;
 }
-#sidebar-first .view-gallery-photos .caption, #sidebar-last .view-gallery-photos .caption {
+#sidebar-first .view-gallery-photos .caption, #sidebar-second .view-gallery-photos .caption {
 	text-align: left !important;
 }
 /* Inside Pages
@@ -211,7 +215,7 @@ div.story-image-info {
 	display: block;
 	text-align: left;
 }
-#sidebar-first li a.active, #sidebar-last li a.active {
+#sidebar-first li a.active, #sidebar-second li a.active {
 	color: #B4B9BB;
 	display: block;
 /*	padding-left: 14px;
