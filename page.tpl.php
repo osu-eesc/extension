@@ -165,7 +165,6 @@
                     $server_path_file_name = $thisServerPath . '/_includes/' . $filename;
                     if (file_exists($server_path_file_name)) {
                       include_once($server_path_file_name);
-echo 'IT WORKS';
                     }
 					else {
 	                      include_once( './sites/default/themes/extension/primary_links_menu.html');
