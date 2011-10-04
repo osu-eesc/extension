@@ -198,7 +198,7 @@ ul.pager li.pager-item a:visited {
 .header-logo {
 	top: 30px !important;
 }
-.hdrbg-program, hdrbg-county {
+.hdrbg-program, .hdrbg-county {
 	background-image: url('../images/extension/gif/header_extension_baked.gif') !important;
 }
 .hdrbg-station {
