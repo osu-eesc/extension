@@ -286,6 +286,10 @@ ul.pager li.pager-item a:visited {
 	background-color: transparent;
 	margin-top: -3px;
 }
+.sidebar-last {
+	overflow-x: hidden;
+	float: right;
+}
 #sidebar-first .block {
 	width: 99%;
 	margin-left: 1%;
@@ -295,6 +299,8 @@ ul.pager li.pager-item a:visited {
 #sidebar-last .block {
 	background-position: 1px 100%;
 	font-size: 12px;
+	margin-left: 0px !important;
+	padding-left: 0px !important;
 }
 #sidebar-last .block .inner {
 	margin-left: 20px !important;
@@ -302,11 +308,17 @@ ul.pager li.pager-item a:visited {
 #ggai-block {
 	background-image: none !important;
 }
+#ggai-block li {
+	padding-bottom: 5px;
+}
+#ggai-block li a {
+	margin-left: 15px;
+}
 #ggai-block .wm_sun {
 	margin: 15px -20% -1px 10% !important;
 }
 .front #ggai-block .wm_sun {
-	margin: 15px -50% -1px 10% !important;
+	margin: 15px -10% -1px 10% !important;
 }
 #footer-message-inner div {
 	margin-right: 0px !important;
