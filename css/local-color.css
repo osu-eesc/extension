@@ -192,15 +192,15 @@ a {
 
 /* Custom list items 
 /-------------------------------------------------------------- */
-#content-content li,
-.postscript-bottom li {
+#content-content ul li,
+.postscript-bottom ul li {
 	list-style-image: url('../images/extension/gif/gfx_ico_listarrow.gif'); 
 }
-#content-content li.vertical-tab-button {
+#content-content ul li.vertical-tab-button {
 	list-style-image: none;
 }
-#sidebar-first li,
-#sidebar-last li {
+#sidebar-first ul li,
+#sidebar-last ul li {
 	list-style: none;
 }
 
