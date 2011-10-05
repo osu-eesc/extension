@@ -45,7 +45,7 @@
       if (stristr($body_classes, 'first-main-last') != FALSE) {
         $sidebar_last_width = 'grid16-4';
         $sidebar_first_width = 'grid16-4';
-      } else if (stristr($body_classes, 'not-front') == FALSE && (variable_get('extension_settings_site_type', 0) == 0 || stristr(variable_get('extension_settings_sitename', 0), 'Extension News') == FALSE)) {
+      } else if (stristr($body_classes, 'not-front') == FALSE && (variable_get('extension_settings_site_type', 0) == 0 && stristr(variable_get('extension_settings_sitename', 0), 'Extension News') == FALSE)) {
         $sidebar_last_width = 'grid16-6';
       } else if (stristr($body_classes, 'not-front') == FALSE && (variable_get('extension_settings_site_type', 0) != 0 || stristr(variable_get('extension_settings_sitename', 0), 'Extension News') != FALSE)) {
         $sidebar_last_width = 'grid16-5';
