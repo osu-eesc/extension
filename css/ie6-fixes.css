@@ -302,6 +302,9 @@ ul.pager li.pager-item a:visited {
 	margin-left: 0px !important;
 	padding-left: 0px !important;
 }
+#sidebar-last li.active-trail a.active {
+	display: inline;
+}
 #sidebar-last .block .inner {
 	margin-left: 20px !important;
 }
