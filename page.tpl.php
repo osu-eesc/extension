@@ -253,14 +253,7 @@ if ($logo == $base_path.$directory.'/logo.png')
                         for ($i=4; $i<7; $i++) {
                           $raw = str_replace('grid16-'.$i, $sidebar_last_width, $raw);
                         }
-                        if (variable_get('extension_settings_site_type', 0) != 0 && variable_get('extension_settings_site_type', 0) != 4) {
-                          $raw_parts = explode('<div id="sidebar-last-inner" class="sidebar-last-inner inner clearfix">', $raw);
-                          $raw_parts['1'] = '<div id="site-name-right-sidebar"><div class="site-name-right-sidebar-inner"><span class="site-name-right-label"><a title="Return to homepage" href="http://' . $_SERVER['SERVER_NAME'] . $base_path . '">' . variable_get('site_name', '') . '</a></span></div></div>' . $raw_parts['1'];
-                          $raw = implode('<div id="sidebar-last-inner" class="sidebar-last-inner inner clearfix">', $raw_parts);
-                          print $raw;
-                        } else {
-                          print $raw;
-                        }
+                        print $raw;  
                       ?>
                     </div><!-- /main-content-inner -->
                   </div><!-- /main-content -->
