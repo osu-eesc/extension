@@ -16,7 +16,7 @@ $(function() {
 	  var n = navigator;
       var l = location;
       var firstFocus = true;
-	  if (q.value == 'Search '+document.title.substring(document.title.indexOf('|')+2))
+	  if (q.value == 'Search...')
 		{
 			q.value = 'Search '+sitename;
 		}
