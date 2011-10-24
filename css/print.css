@@ -2,32 +2,22 @@
 
 /* underline all links */
 a:link, a:visited {
-	text-decoration: underline !important;
+  text-decoration: underline !important;
 }
 
 /* Don't underline header */
 #site-name a:link,
 #site-name a:visited {
-	text-decoration: none !important;
+  text-decoration: none !important;
 }
-
-/* CSS2 selector to add visible href after links
-#content a:link:after,
-#content a:visited:after
-{
-content: " (" attr(href) ") ";
-font-size: 0.8em;
-font-weight: normal;
-}
-*/
 
 /* Un-float the content */
 #content,
 #content-inner {
-	float: none;
-	width: 100%;
-	margin: 0 !important;
-	padding: 0 !important;
+  float: none;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /* Turn off any background colors or images */
@@ -35,9 +25,9 @@ body,
 #page, #page-inner,
 #main, #main-inner,
 #content, #content-inner {
-	color: #000;
-	background-color: transparent !important;
-	background-image: none !important;
+  color: #000;
+  background-color: transparent !important;
+  background-image: none !important;
 }
 
 /* Hide sidebars and nav elements */
@@ -46,86 +36,27 @@ body,
 #footer-message-wrapper, #content-tabs, #breadcrumbs, 
 #comments, #admin-menu, .fusion-edit, div.tabs, .links, 
 .taxonomy,.book-navigation, .forum-topic-navigation, 
-.pager, .feed-icons, .views-admin-links {
-	visibility: hidden;
-	display: none;
+.pager, .feed-icons, .views-admin-links,
+#header-primary-menu-wrapper, #block-textsize,
+#preface-top-wrapper {
+  visibility: hidden;
+  display: none;
+  width: 0 !important;
+  height: 0 !important;
 }
+
+/* Set main content to full page width */
+#content-group {
+  width: 100% !important;
+}
+
+/* Hide the "add to any" block */
+.block-addtoany {
+  display: none !important;
+}
+
 
 /* Otherwise, Firefox clips the content after the first page. */
 #page {
-	overflow-y: visible;
-}
-
-@media screen {
-	body {
-		padding: 50px 0 100px 0;
-		background: #F8F8F8 !important;
-	}
-
-	#limiter, #content-wrapper {
-		border: 5pt solid #EEEEEE;
-	}
-	
-	#send-to-printer input {
-		background:url('../design_packs/eesc/images/button-bg.png') repeat-x scroll 50% 0 #9E9E9E;
-		border:3px solid #E9E9E9;
-		color:#FFFFFF;
-	}
-}
-
-@media print {
-	#send-to-printer {
-		visibility: hidden;
-		display: none;
-	}
-}
-
-#limiter, #content-wrapper {
-	width: 7in !important;
-	padding: 0.5in !important;
-	margin: auto;
-	background: #FFFFFF !important;
-}
-body {
-	font-family: "Georgia","Times New Roman",serif;
-	font-size: 12pt;
-}
-.print-friendly-body .views-field-title {
-	font-size: 23px;
-	padding-top:25px;
-}
-.print-friendly-body h3 {
-	font-size: 15px;
-}
-
-
-
-/* -- Events Table -- */
-div.events-table table.views-table caption span.date-display-single {
-	font-size: 1.25em;
-	font-weight: bold;
-}
-
-#send-to-printer {
-	float: right;
-}
-
-.date-display-start, 
-.date-display-end,
-.date-display-single {
-	font-size: 11pt;
-}
-.date-display-end {
-	padding-right: 15px;
-}
-.views-field-field-event-link-url {
-	padding-right: 15px;
-}
-.view-header h3 {
-	padding-top: 15px;
-	font-size: 23px;
-	font-weight: normal;
-	}
-#header-primary-menu-wrapper {
-	display: none;
+  overflow-y: visible;
 }
