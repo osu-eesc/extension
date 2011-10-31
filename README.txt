@@ -1,3 +1,5 @@
+Extension Drupal 6.x theme based on Acquia Prosper
+
 -- SUMMARY --
 
 Acquia Prosper is an advanced Drupal theme, with a monochromatic look and clean lines.  It is designed as an Ubercart e-commerce theme but is extremely flexible for any type of site. 

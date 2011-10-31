@@ -1,5 +1,9 @@
 <?php
 // $Id: page.tpl.php,v 1.1.2.5 2010/01/11 00:09:05 sociotech Exp $
+if ($logo == $base_path.$directory.'/logo.png')
+{
+	$logo = $base_path.$directory.'/logo.jpg';
+}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="<?php print $language->language; ?>" xml:lang="<?php print $language->language; ?>" id="html-alpha">
@@ -45,7 +49,7 @@
       if (stristr($body_classes, 'first-main-last') != FALSE) {
         $sidebar_last_width = 'grid16-4';
         $sidebar_first_width = 'grid16-4';
-      } else if (stristr($body_classes, 'not-front') == FALSE && (variable_get('extension_settings_site_type', 0) == 0 || stristr(variable_get('extension_settings_sitename', 0), 'Extension News') == FALSE)) {
+      } else if (stristr($body_classes, 'not-front') == FALSE && (variable_get('extension_settings_site_type', 0) == 0 && stristr(variable_get('extension_settings_sitename', 0), 'Extension News') == FALSE)) {
         $sidebar_last_width = 'grid16-6';
       } else if (stristr($body_classes, 'not-front') == FALSE && (variable_get('extension_settings_site_type', 0) != 0 || stristr(variable_get('extension_settings_sitename', 0), 'Extension News') != FALSE)) {
         $sidebar_last_width = 'grid16-5';
@@ -70,13 +74,17 @@
               </div><!-- /osu-top-hat -->
 
               <div id="header-top-links">
-                <?php if (variable_get('extension_settings_site_type', 0) != 4) : ?>
-                  <a href="http://extension.oregonstate.edu/node/312">Donate</a>
+                <?php if (variable_get('extension_settings_site_type', 0) != 4) {
+					if (stristr(theme('grid_row', $header_top, 'header-top-region', 'full-width', $grid_width), 'header-top-link') == FALSE) { ?>
+
+				 <a href="http://extension.oregonstate.edu/node/312">Donate</a>
                   &nbsp; |&nbsp;&nbsp;
                   <a href="http://extension.oregonstate.edu/node/3248">Calendar</a>
                   &nbsp;&nbsp;|&nbsp;&nbsp;
                   <a href="http://outreach.oregonstate.edu">Outreach &amp; Engagement</a>
-                <?php endif; ?>
+
+                <?php }
+				} ?>
               </div>
               <?php print theme('grid_row', $header_top, 'header-top-region', 'full-width', $grid_width); ?>
               <?php print theme('grid_block', $search_box, 'search-box'); ?>
@@ -92,59 +100,9 @@
               <div id="header-group-inner" class="header-group-inner inner clearfix">
                 <div id="header-site-info" class="header-site-info block">
                   <div id="header-site-info-inner" class="header-site-info-inner inner clearfix">
-                    <div id="logo" class="<?php
-                    switch (variable_get('extension_settings_site_type', 0)) {
-                    case 0:
-                      print 'hdrbg-program';
-                      break;
-                    case 1:
-                      print 'hdrbg-county';
-                      break;
-                    case 2:
-                      print 'hdrbg-station';
-                      break;
-                    case 3:
-                      print 'hdrbg-combined';
-                      break;
-                    case 4:
-                      print 'hdrbg-other';
-                      break;
-                    } ?>">
-                      <div id="site-name-slogan" class="site-name-slogan">
-                        <div class="header-logo">
-                              <?php
-                                switch (variable_get('extension_settings_site_type', 0)) {
-                                case 0: // main extension site
-                                  print '<a href="http://' . $_SERVER['SERVER_NAME'] . '" title="Oregon State University Extension Service"><div id="site-title">';
-                                  print '<img id="ptitle-img" src="' . $base_path . $directory . '/images/extension/png/header_title_extension.png" alt="'.$site_name.'" />';
-                                  break;
-                                case 1: // county site
-                                  print '<a href="http://' . $_SERVER['SERVER_NAME'] . '" title="Oregon State University Extension Service"><div id="site-title">';
-                                  print '<img id="ptitle-img" src="' . $base_path . $directory . '/images/extension/png/header_title_extension.png" alt="'.$site_name.'" />';
-                                  break;
-                                case 2: // branch station
-                                  print '<a href="http://agsci.oregonstate.edu/research/" title="Oregon Agricultural Experiment Station | College of Agricultural Sciences"><div id="site-title">';
-                                  print '<img id="ptitle-img" src="' . $base_path . $directory . '/images/extension/png/header_title_agexpstation.png" alt="'.$site_name.'" />';
-                                  break;
-                                case 3: // combined site
-                                  print '<a href="http://agsci.oregonstate.edu/research/" title="Oregon Agricultural Experiment Station | College of Agricultural Sciences"><div id="site-title">';
-                                  print '<img id="ptitle-img" src="' . $base_path . $directory . '/images/extension/png/header_title_combined.png" alt="'.$site_name.'" />';
-                                  break;
-                                case 4: // custom
-                                  print '<a href="http://' . $_SERVER['SERVER_NAME'] . $base_path . '" title="' . variable_get('extension_settings_header_text', '') . ' homepage"><div id="site-title">';
-                                  print '<span id="ptitle-text">'.variable_get('extension_settings_header_text', '').'</span>';
-                                  break;
-                                default:
-                                  print '<a href="http://' . $_SERVER['SERVER_NAME'] . '" title="Oregon State University Extension Service"><div id="site-title">';
-                                  print '<img src="' . $base_path . $directory . '/images/extension/png/header_title_extension.png" alt="'.$site_name.'" />';
-                                  break;
-                                }
-                              ?>
-                            </div>
-                          </a>
-                        </div><!-- /header-ext-logo -->
-                      </div><!-- /site-name-slogan -->
-                    </div><!-- /logo -->
+                    <a id="logo" title="<?php print $site_name;?>" href="<?php print check_url($front_page); ?>">
+                    	<img src="<?php print $logo;?>">
+                    </a><!-- /logo -->
                   </div><!-- /header-site-info-inner *** newly added closing tag ****-->
                 </div><!-- /header-site-info -->
 
@@ -165,7 +123,6 @@
                     $server_path_file_name = $thisServerPath . '/_includes/' . $filename;
                     if (file_exists($server_path_file_name)) {
                       include_once($server_path_file_name);
-echo 'IT WORKS';
                     }
 					else {
 	                      include_once( './sites/default/themes/extension/primary_links_menu.html');
@@ -296,14 +253,7 @@ echo 'IT WORKS';
                         for ($i=4; $i<7; $i++) {
                           $raw = str_replace('grid16-'.$i, $sidebar_last_width, $raw);
                         }
-                        if (variable_get('extension_settings_site_type', 0) != 0 && variable_get('extension_settings_site_type', 0) != 4) {
-                          $raw_parts = explode('<div id="sidebar-last-inner" class="sidebar-last-inner inner clearfix">', $raw);
-                          $raw_parts['1'] = '<div id="site-name-right-sidebar"><div class="site-name-right-sidebar-inner"><span class="site-name-right-label"><a title="Return to homepage" href="http://' . $_SERVER['SERVER_NAME'] . $base_path . '">' . variable_get('site_name', '') . '</a></span></div></div>' . $raw_parts['1'];
-                          $raw = implode('<div id="sidebar-last-inner" class="sidebar-last-inner inner clearfix">', $raw_parts);
-                          print $raw;
-                        } else {
-                          print $raw;
-                        }
+                        print $raw;  
                       ?>
                     </div><!-- /main-content-inner -->
                   </div><!-- /main-content -->

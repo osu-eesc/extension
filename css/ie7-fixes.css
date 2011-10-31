@@ -103,11 +103,17 @@ ul.pager,
 #ggai-block {
 	margin-bottom: -19px !important;
 }
+#ggai-block li {
+	margin-bottom: 5px;
+}
+#ggai-block li a {
+	margin-left: 15px;
+}
 #ggai-block .wm_sun {
 	margin: 15px -20% -1px 10% !important;
 }
 .front #ggai-block .wm_sun {
-	margin: 15px -50% -1px 10% !important;
+	margin: 15px -10% -1px 10% !important;
 }
 #block-block-8 > div  {
 	margin-right: 0px !important;

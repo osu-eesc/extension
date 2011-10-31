@@ -182,6 +182,9 @@ html.js fieldset.collapsible legend a {
 	line-height: 1.6em;
 	color: red;
 }
+#content-inner p {
+	line-height: 19px;
+}
 
 /* Images
 /-------------------------------------------------------------- */

@@ -721,3 +721,15 @@ margin-top: 5px;
 	  padding: 6px 5px 0 5px;
 	  display: block;
 }
+.view-header-top-links {
+	margin-left: 130px;
+}
+.view-header-top-links *{
+	color: #CCC !important;
+}
+.view-header-top-links .views-row {
+	float: left;
+}
+.view-header-top-links .views-row-first span.lsep {
+	display: none;
+}
