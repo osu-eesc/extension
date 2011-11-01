@@ -745,5 +745,8 @@ li.pager-previous a, li.pager-next a, li.pager-first a, li.pager-last a {
 	margin-top: -4px !important;
 }
 ul.pager a.views-throbbing {
+	padding-right: auto !important;
+}
+ul.pager li.pager-item a.views-throbbing {
 	padding-right: 8px !important;
 }
