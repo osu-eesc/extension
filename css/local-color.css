@@ -429,4 +429,5 @@ ul.pager li a:hover {
 }
 ul.pager a.views-throbbing {
 	color: #fff !important;
+	border-color: #333 !important;
 }
