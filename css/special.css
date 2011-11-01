@@ -1,0 +1,57 @@
+@keyframes throb
+{
+	0% {background-color: auto;}
+	100% {background-color: #D85a1a;}
+}
+@-webkit-keyframes throb
+{
+	0% {background-color: auto;}
+	100% {background-color: #D85a1a;}
+}
+@-moz-keyframes throb
+{
+	0% {background-color: auto;}
+	100% {background-color: #D85a1a;}
+}
+@-o-keyframes throb
+{
+	0% {background-color: auto;}
+	100% {background-color: #D85a1a;}
+}
+@-ms-keyframes throb
+{
+	0% {background-color: auto;}
+	100% {background-color: #D85a1a;}
+}
+ul.pager a.views-throbbing
+{
+	animation-name: throb;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 0.25s;
+	animation-direction: alternate;
+	
+	-webkit-animation-name: throb;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-duration: 0.25s;
+	-webkit-animation-direction: alternate;
+	
+	-moz-animation-name: throb;
+	-moz-animation-timing-function: ease-in-out;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-duration: 0.25s;
+	-moz-animation-direction: alternate;
+	
+	-o-animation-name: throb;
+	-o-animation-timing-function: ease-in-out;
+	-o-animation-iteration-count: infinite;
+	-o-animation-duration: 0.25s;
+	-o-animation-direction: alternate;
+	
+	-ms-animation-name: throb;
+	-ms-animation-timing-function: ease-in-out;
+	-ms-animation-iteration-count: infinite;
+	-ms-animation-duration: 0.25s;
+	-ms-animation-direction: alternate;
+}

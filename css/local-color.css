@@ -411,29 +411,22 @@ ul.pager {
   border-bottom: none;
 }
 
+ul.pager li a,
 ul.pager li a:link,
 ul.pager li a:visited {
-  background: #C6C8C9 url('../images/extension/png/pager-bg.png') repeat-x 50% 0;
+  background-color: #FFF !important;
+	background-image: none !important;
   border: 1px solid #C6C8C9;
-  color: #fff;
+  color: #666;
 }
-
-/* Pager - First */
-ul.pager li.pager-first a {
-  background: url('../images/extension/png/pager-first.png') no-repeat;
+ul.pager li.pager-current {
+	color: #666 !important;
 }
-
-/* Pager - Previous */
-ul.pager li.pager-previous a {
-  background: url('../images/extension/png/pager-previous.png') no-repeat;
+ul.pager li a:hover {
+	background-color: #666 !important;
+	border-color: #333 !important;
+	color: #FFF !important;
 }
-
-/* Pager - Next */
-ul.pager li.pager-next a {
-  background: url('../images/extension/png/pager-next.png') no-repeat;
-}
-
-/* Pager - Last */
-ul.pager li.pager-last a {
-  background: url('../images/extension/png/pager-last.png') no-repeat;
+ul.pager a.views-throbbing {
+	color: #fff !important;
 }

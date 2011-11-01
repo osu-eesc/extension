@@ -13,14 +13,14 @@ if ($logo == $base_path.$directory.'/logo.png')
     <?php print $head; ?>
     <?php print $styles; ?>
     <?php print $setting_styles; ?>
+		 <?php print $local_styles; ?>
+		 <link href="/sites/default/themes/extension/css/special.css" rel="stylesheet"/>
     <!--[if IE 8]>
       <?php print $ie8_styles; ?>
     <![endif]-->
     <!--[if IE 7]>
       <?php print $ie7_styles; ?>
     <![endif]-->
-
-    <?php print $local_styles; ?>
     <?php print '<!--[if lte IE 6]>'.$ie6_styles.'<![endif]-->';?>
     <link href="/sites/default/themes/extension/css/google_cse_override.css" rel="stylesheet"/>
     <?php print $scripts; ?>

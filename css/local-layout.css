@@ -733,3 +733,17 @@ margin-top: 5px;
 .view-header-top-links .views-row-first span.lsep {
 	display: none;
 }
+ul.pager li {
+	padding-top: 1px !important;
+}
+li.pager-current {
+	padding-top: 5px !important;
+	height: 20px !important;
+}
+li.pager-previous a, li.pager-next a, li.pager-first a, li.pager-last a {
+	height: 18px !important;
+	margin-top: -4px !important;
+}
+ul.pager a.views-throbbing {
+	padding-right: 8px !important;
+}
