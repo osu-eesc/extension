@@ -747,3 +747,6 @@ li.pager-previous a, li.pager-next a, li.pager-first a, li.pager-last a {
 ul.pager a.views-throbbing {
 	padding-right: 8px !important;
 }
+#edit-body_styleselect {
+  display: none !important;
+}
