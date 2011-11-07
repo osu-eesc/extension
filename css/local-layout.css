@@ -773,3 +773,6 @@ ul.pager li.pager-first a, ul.pager li.pager-previous a, ul.pager li.pager-next 
 	}
 }
 /*--End pager layout style override--*/
+#edit-body_styleselect {
+  display: none !important;
+}
