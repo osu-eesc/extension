@@ -122,7 +122,7 @@ blockquote {
 	top: 73px;
 	position: absolute;
 }	
-	
+
 /* Primary Menu
 /-------------------------------------------------------------- */
 #header-primary-menu-inner {
@@ -733,46 +733,20 @@ margin-top: 5px;
 .view-header-top-links .views-row-first span.lsep {
 	display: none;
 }
-/*--Start pager layout style override: Some layout-pertinent typography included--*/
-ul.pager * {
-	margin: 0 !important;
-	padding: 0 !important;
-	line-height: 0 !important;
-	height: 0 !important;
-	width: 0 !important;
-	text-indent: 0 !important;
+ul.pager li {
+	padding-top: 1px !important;
 }
-ul.pager li, ul.pager li a {
-	display: block !important;
-	float: left !important;
+li.pager-current {
+	padding-top: 5px !important;
+	height: 20px !important;
 }
-ul.pager li.pager-item, ul.pager li.pager-first, ul.pager li.pager-previous, ul.pager li.pager-next, ul.pager li.pager-last {
-	height: 16px !important;
-	width: 20px !important;
-	margin: 0 2px !important;
+li.pager-previous a, li.pager-next a, li.pager-first a, li.pager-last a {
+	height: 18px !important;
+	margin-top: -4px !important;
 }
-ul.pager li.pager-current {
-	line-height: 38px !important;
-	height: 27px !important;
-	width: 20px !important;
-	margin: -10px 0 0 2px !important;
+ul.pager a.views-throbbing {
+	padding-right: 8px !important;
 }
-ul.pager li a {
-	line-height: 16px !important;
-	height: 16px !important;
-	width: 20px !important;
-}
-ul.pager li.pager-first a, ul.pager li.pager-previous a, ul.pager li.pager-next a, ul.pager li.pager-last a {
-	font-size: 18px !important;
-	font-weight: normal !important;
-	line-height: 13px !important;
-}
-@-moz-document url-prefix() {
-	ul.pager li.pager-first a, ul.pager li.pager-previous a, ul.pager li.pager-next a, ul.pager li.pager-last a {
-		line-height: 12px !important;
-	}
-}
-/*--End pager layout style override--*/
 #edit-body_styleselect {
   display: none !important;
 }
