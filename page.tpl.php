@@ -226,13 +226,19 @@ $body_classes .= ' site-type-'.variable_get('extension_settings_site_type', 0);
                                             $raw = str_replace('grid16-'.$i,'grid16-'.(substr($content_group_width, 7)-1), $raw);
                                           }
                                           if ($content_right) {
+
                                             $raw_parts = explode('<div class="content clearfix">', $raw);
-                                            $raw_parts['1'] = '<div id="content-right" class="content-right grid16-4"><div id="content-right-inner" class="content-right-inner inner">' . $content_right . '</div></div>' . $raw_parts['1'];
+                                            if (count($raw_parts) > 1)
+																						{
+																							$raw_parts['1'] = '<div id="content-right" class="content-right grid16-4"><div id="content-right-inner" class="content-right-inner inner">' . $content_right . '</div></div>' . $raw_parts['1'];
+																						}
+																						else
+																						{
+																							$raw_parts['0'] = '<div class="content clearfix"><div id="content-right" class="content-right grid16-4"><div id="content-right-inner" class="content-right-inner inner">' . $content_right . '</div></div></div>' . $raw_parts['0'];
+																						}
                                             $raw = implode('<div class="content clearfix">', $raw_parts);
-                                            print $raw;
-                                          } else {
-                                            print $raw;
                                           }
+                                            print $raw;
                                         ?>
                                       </div><!-- /content-content -->
                                     <?php endif; ?>
