@@ -752,7 +752,6 @@ ul.pager li.pager-item, ul.pager li.pager-first, ul.pager li.pager-previous, ul.
 }
 
 ul.pager li.pager-current {
-	line-height: 37px !important;
 	height: 27px !important;
 	width: 20px !important;
 	margin: -10px 0 0 2px !important;
@@ -762,14 +761,5 @@ ul.pager li a {
 	height: 17px !important;
 	width: 20px !important;
 }
-ul.pager li.pager-first a, ul.pager li.pager-previous a, ul.pager li.pager-next a, ul.pager li.pager-last a {
-	font-size: 18px !important;
-	font-weight: normal !important;
-	line-height: 13px !important;
-}
-@-moz-document url-prefix() {
-	ul.pager li.pager-first a, ul.pager li.pager-previous a, ul.pager li.pager-next a, ul.pager li.pager-last a {
-		line-height: 12px !important;
-	}
-}
+
 
