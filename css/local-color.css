@@ -410,17 +410,26 @@ ul.pager {
   border-right: none;
   border-bottom: none;
 }
-
-ul.pager li a,
-ul.pager li a:link,
-ul.pager li a:visited {
-  background-color: #FFF !important;
+ul.pager * {
 	background-image: none !important;
-  border: 1px solid #C6C8C9;
-  color: #666;
+	background-color: #fff !important;
+	color: #666 !important;
+}
+ul.pager li.pager-current, ul.pager li a {
+	border-bottom: 1px solid #C6C8C9 !important;
+	border-left: 1px solid #C6C8C9 !important;
+	border-right: 1px solid #C6C8C9 !important;
+	border-radius: 2px !important;
+	-moz-border-radius: 2px !important;
+	-ms-border-radius: 2px !important;
+	-o-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
 }
 ul.pager li.pager-current {
-	color: #666 !important;
+	border-top: 1px solid #fff !important;
+}
+ul.pager li a {
+	border-top: 1px solid #C6C8C9 !important;
 }
 ul.pager li a:hover {
 	background-color: #666 !important;
@@ -429,5 +438,4 @@ ul.pager li a:hover {
 }
 ul.pager a.views-throbbing {
 	color: #fff !important;
-	border-color: #333 !important;
 }

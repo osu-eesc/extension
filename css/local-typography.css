@@ -221,6 +221,26 @@ div.story-image-info {
 	background: url('../images/extension/gif/gfx_ico_listarrow2.gif') left 2px no-repeat;
 	*/
 }
+ul.pager * {
+	line-height: 0 !important;
+	text-indent: 0 !important;
+}
+ul.pager li.pager-current {
+	line-height: 37px !important;
+}
+ul.pager li a {
+	line-height: 16px !important;
+}
+ul.pager li.pager-first a, ul.pager li.pager-previous a, ul.pager li.pager-next a, ul.pager li.pager-last a {
+	font-size: 18px !important;
+	font-weight: normal !important;
+	line-height: 13px !important;
+}
+@-moz-document url-prefix() {
+	ul.pager li.pager-first a, ul.pager li.pager-previous a, ul.pager li.pager-next a, ul.pager li.pager-last a {
+		line-height: 12px !important;
+	}
+}
 /* Printer Friendly
 /-------------------------------------------------------------- 
 
