@@ -13,7 +13,7 @@ body {
 	background: #cbc9c5 url('../images/extension/gif/lay_bg_stripe.gif') repeat;
 }
 
-#content-group h1.title, #content-group h2.title{
+#content-group h1.title {
 	color: #5e8002 !important;
 }
 h2, h3, h4, h5 {
