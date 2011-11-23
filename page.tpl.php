@@ -120,8 +120,8 @@ $body_classes .= ' site-type-'.variable_get('extension_settings_site_type', 0);
                   switch (variable_get('extension_settings_site_type', 0)) {
                   case 0: // main extension site
                     $thisServerPath = variable_get('extension_settings_server_path', '/www/virtual/');
-                    $filename = 'primary_links_menu.inc';
-                    $server_path_file_name = $thisServerPath . '/_includes/' . $filename;
+                    $filename = 'primary_links_menu_main.inc';
+                    $server_path_file_name = $thisServerPath . '/_includes/primary_menu_includes/' . $filename;
                     if (file_exists($server_path_file_name)) {
                       include_once($server_path_file_name);
                     }
@@ -131,8 +131,8 @@ $body_classes .= ' site-type-'.variable_get('extension_settings_site_type', 0);
                     break;
                   case 1: // county site
                     $thisServerPath = variable_get('extension_settings_server_path', '/www/virtual/');
-                    $filename = 'primary_links_menu.inc';
-                    $server_path_file_name = $thisServerPath . '/_includes/' . $filename;
+                    $filename = 'primary_links_menu_county.inc';
+                    $server_path_file_name = $thisServerPath . '/_includes/primary_menu_includes/' . $filename;
                     if (file_exists($server_path_file_name)) {
                       include_once($server_path_file_name);
                     }
@@ -142,16 +142,16 @@ $body_classes .= ' site-type-'.variable_get('extension_settings_site_type', 0);
                     break;
                   case 2: // branch station
                     $thisServerPath = variable_get('extension_settings_server_path', '/www/virtual/');
-                    $filename = 'primary_links_aes_menu.inc';
-                    $server_path_file_name = $thisServerPath . '/_includes/' . $filename;
+                    $filename = 'primary_links_aes_menu_branch.inc';
+                    $server_path_file_name = $thisServerPath . '/_includes/primary_menu_includes/' . $filename;
                     if (file_exists($server_path_file_name)) {
                       include_once($server_path_file_name);
                     }
                     break;
                   case 3: // combined site
                     $thisServerPath = variable_get('extension_settings_server_path', '/www/virtual/');
-                    $filename = 'primary_links_aes_menu.inc';
-                    $server_path_file_name = $thisServerPath . '/_includes/' . $filename;
+                    $filename = 'primary_links_menu_combined.inc';
+                    $server_path_file_name = $thisServerPath . '/_includes/primary_menu_includes/' . $filename;
                     if (file_exists($server_path_file_name)) {
                       include_once($server_path_file_name);
                     }
@@ -225,7 +225,7 @@ $body_classes .= ' site-type-'.variable_get('extension_settings_site_type', 0);
                                           for ($i=substr($content_group_width, 7); $i<17; $i++) {
                                             $raw = str_replace('grid16-'.$i,'grid16-'.(substr($content_group_width, 7)-1), $raw);
                                           }
-                                          if ($content_right) {
+                                          if ($content_right && arg(0) != 'admin' && (arg(0) != 'node' || arg(2) != 'edit')) {
 
                                             $raw_parts = explode('<div class="content clearfix">', $raw);
                                             if (count($raw_parts) > 1)
