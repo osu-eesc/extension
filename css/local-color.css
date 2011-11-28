@@ -439,3 +439,6 @@ ul.pager li a:hover {
 ul.pager a.views-throbbing {
 	color: #fff !important;
 }
+.emvideo-thumbnail-replacement span {
+	background: url('../images/extension/png/gfx_btn_play.png') no-repeat !important;
+}
