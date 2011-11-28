@@ -308,7 +308,7 @@ $body_classes .= ' site-type-'.variable_get('extension_settings_site_type', 0);
             <div style="display: inline; width: 100%; margin: auto; text-align: center;">
               <span><a href="http://oregonstate.edu/main/about/copyright">Copyright</a> &copy; 1995-<?php print date(Y);?> <a href="http://oregonstate.edu">Oregon State University</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://oregonstate.edu/main/about/disclaimer/">Web Disclaimer</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://extension.oregonstate.edu/node/3299">Equal Opportunity&#47;Accessibility</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="<?php print variable_get('extension_settings_webmaster_link', 'http://extension.oregonstate.edu/employee/extension-webmaster');?>">Contact the Webmaster</a></span><br/></span></div>
 
-              <?php print theme('grid_block', $footer_message, 'footer-message-text'); ?>
+              <?php //print theme('grid_block', $footer_message, 'footer-message-text'); ?>
             </div><!-- /footer-message-inner -->
           </div><!-- /footer-message -->
         </div><!-- /footer-message-wrapper -->
