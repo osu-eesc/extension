@@ -442,3 +442,10 @@ ul.pager a.views-throbbing {
 .emvideo-thumbnail-replacement span {
 	background: url('../images/extension/png/gfx_btn_play.png') no-repeat !important;
 }
+.galleryformatter-greenarrows .gallery-thumbs .arrow, 
+.galleryformatter-greenarrows .gallery-thumbs .wrapper, 
+.galleryformatter-greenarrows .gallery-thumbs li.active a, 
+.galleryformatter-greenarrows .gallery-thumbs li a:hover, 
+.galleryformatter-greenarrows .galleryformatter-view-full {
+	background-image: url('../images/extension/png/gfx_btn_gallery.png');
+}
