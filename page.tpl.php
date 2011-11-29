@@ -101,7 +101,7 @@ $body_classes .= ' site-type-'.variable_get('extension_settings_site_type', 0);
               <div id="header-group-inner" class="header-group-inner inner clearfix">
                 <div id="header-site-info" class="header-site-info block">
                   <div id="header-site-info-inner" class="header-site-info-inner inner clearfix">
-                    <a id="logo" title="<?php print $site_name;?>" href="<?php print check_url($front_page); ?>">
+                    <a id="logo" title="<?php print (variable_get('extension_settings_banner_link', 0) && variable_get('extension_settings_banner_link', 0) != '' ? variable_get('extension_settings_banner_link', 0) : $site_name); ?>" href="<?php print (variable_get('extension_settings_banner_link', 0) && variable_get('extension_settings_banner_link', 0) != '' ? variable_get('extension_settings_banner_link', 0) : check_url($front_page)); ?>">
                     	<img src="<?php print $logo;?>">
                     </a><!-- /logo -->
                   </div><!-- /header-site-info-inner *** newly added closing tag ****-->
