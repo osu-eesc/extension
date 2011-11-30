@@ -74,19 +74,6 @@ $body_classes .= ' site-type-'.variable_get('extension_settings_site_type', 0);
                 </a>
               </div><!-- /osu-top-hat -->
 
-              <div id="header-top-links">
-                <?php if (variable_get('extension_settings_site_type', 0) != 4) {
-					if (stristr(theme('grid_row', $header_top, 'header-top-region', 'full-width', $grid_width), 'header-top-link') == FALSE) { ?>
-
-				 <a href="http://extension.oregonstate.edu/node/312">Donate</a>
-                  &nbsp; |&nbsp;&nbsp;
-                  <a href="http://extension.oregonstate.edu/node/3248">Calendar</a>
-                  &nbsp;&nbsp;|&nbsp;&nbsp;
-                  <a href="http://outreach.oregonstate.edu">Outreach &amp; Engagement</a>
-
-                <?php }
-				} ?>
-              </div>
               <?php print theme('grid_row', $header_top, 'header-top-region', 'full-width', $grid_width); ?>
               <?php print theme('grid_block', $search_box, 'search-box'); ?>
             </div><!-- /header-top-inner -->

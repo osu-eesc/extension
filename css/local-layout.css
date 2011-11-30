@@ -763,3 +763,7 @@ ul.pager li a {
 }
 
 
+.block-google_cse {
+  float: right !important;
+  width: auto !important;
+}
