@@ -10,7 +10,7 @@ $body_classes .= ' site-type-'.variable_get('extension_settings_site_type', 0);
 <html xmlns="http://www.w3.org/1999/xhtml" lang="<?php print $language->language; ?>" xml:lang="<?php print $language->language; ?>" id="html-alpha">
 
   <head>
-    <title><?php print $title.' | '.$site_name; ?></title>
+    <title><?php print $head_title; ?></title>
     <?php print $head; ?>
     <?php print $styles; ?>
     <?php print $setting_styles; ?>
