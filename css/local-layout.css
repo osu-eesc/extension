@@ -792,3 +792,6 @@ ul.pager li a {
 #osu-search {
 	margin-top: 15px;
 }
+#osu-search-submit {
+	margin: 1px auto auto 7px;
+}

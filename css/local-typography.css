@@ -253,3 +253,6 @@ ul.pager li.pager-first a, ul.pager li.pager-previous a, ul.pager li.pager-next 
 	 line-height: 140%;
 	  text-align: left;
 }
+#osu-search-submit {
+	text-indent: 9999px;
+}

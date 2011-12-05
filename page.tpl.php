@@ -76,7 +76,7 @@ $body_classes .= ' site-type-'.variable_get('extension_settings_site_type', 0);
               <?php print theme('grid_row', $header_top, 'header-top-region', 'full-width', $grid_width); ?>
               
               <div id="osu-search"> <!-- cws search form -->
-             	  <?php echo $osu_search_image_submit_form; ?>
+             	  <?php echo $osu_search_form; ?>
              	</div>
               
             </div><!-- /header-top-inner -->
