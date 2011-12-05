@@ -439,3 +439,19 @@ ul.pager li a:hover {
 ul.pager a.views-throbbing {
 	color: #fff !important;
 }
+#osu-search
+{
+	background: url('../images/extension/png/search-icon.png') scroll no-repeat 138px 0px;
+}
+#osu-search-submit
+{
+	border: none;
+	background: none;
+	opacity: 0;
+}
+#osu-search-query:focus
+{
+	outline: none;
+	border: 1px solid #d85a1a;
+	padding: 4px 3px;
+}

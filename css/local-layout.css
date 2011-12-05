@@ -783,3 +783,12 @@ ul.pager li a {
   width: 22px;
   height: 22px;
 }
+#header-top-region-wrapper {
+	float: left;
+	min-width: 700px;
+	width: 700px;
+	overflow: hidden;
+}
+#osu-search {
+	margin-top: 15px;
+}
