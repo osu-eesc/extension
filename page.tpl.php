@@ -23,7 +23,6 @@ $body_classes .= ' site-type-'.variable_get('extension_settings_site_type', 0);
       <?php print $ie7_styles; ?>
     <![endif]-->
     <?php print '<!--[if lte IE 6]>'.$ie6_styles.'<![endif]-->';?>
-    <link href="/sites/default/themes/extension/css/google_cse_override.css" rel="stylesheet"/>
     <?php print $scripts; ?>
   </head>
 
@@ -75,7 +74,11 @@ $body_classes .= ' site-type-'.variable_get('extension_settings_site_type', 0);
               </div><!-- /osu-top-hat -->
 
               <?php print theme('grid_row', $header_top, 'header-top-region', 'full-width', $grid_width); ?>
-              <?php print theme('grid_block', $search_box, 'search-box'); ?>
+              
+              <div id="osu-search"> <!-- cws search form -->
+             	  <?php echo $osu_search_image_submit_form; ?>
+             	</div>
+              
             </div><!-- /header-top-inner -->
           </div><!-- /header-top -->
         </div><!-- /header-top-wrapper -->

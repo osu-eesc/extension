@@ -55,7 +55,16 @@ function extension_preprocess_page(&$vars, $hook) {
 				}
 		}
 	}
+	
+	// cws search form - Create the indexes in our vars array for population by osu_search_get_template_form
+  $vars['osu_search_form'] = null;
+  $vars['osu_search_image_submit_form'] = null;
+
+  if (module_exists('osu_search')) {
+      osu_search_get_template_form($vars);
+  }
 }
+
 function extension_date_all_day_label() {
 return '';
 }

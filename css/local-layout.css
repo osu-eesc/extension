@@ -762,8 +762,24 @@ ul.pager li a {
 	width: 20px !important;
 }
 
+/* OSU Search (mark up from cws themes) */
+#osu-search {
+	float:right;
+	margin-right: 10px;
+}
 
-.block-google_cse {
-  float: right !important;
-  width: auto !important;
+#osu-search-query-wrapper, #osu-search-query, #osu-search-submit {
+	display:inline;
+	margin:0;
+	float:left;
+}
+
+#osu-search-scope-wrapper {
+	display:none;
+}
+
+#osu-search-submit {
+	background: url('../images/extension/png/search-icon.png') no-repeat scroll top left;
+  width: 22px;
+  height: 22px;
 }
