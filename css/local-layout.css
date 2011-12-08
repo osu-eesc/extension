@@ -803,8 +803,11 @@ ul.pager li a {
 #results dd {
 	margin-bottom: 1px;
 }
-.osu-search-results-url {
+.osu-search-result-url {
 	margin-bottom: 1em;
+}
+.osu-search-result-title {
+	font-size: 13.5px;
 }
 #querystats {
 	text-align: right;
