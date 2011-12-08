@@ -464,5 +464,5 @@ ul.pager a.views-throbbing {
 	color: #999;
 }
 .osu-search-result-url {
-	color: #888;
+	color: #888 !important;
 }
