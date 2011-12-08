@@ -794,3 +794,25 @@ ul.pager li a {
 #osu-search-submit {
 	margin: 1px auto auto 7px;
 }
+#osu-search-form #edit-submit {
+  margin-top: -65px;
+  display: block;
+  margin-left: 340px;
+  margin-bottom: 45px;
+}
+#results dd {
+	margin-bottom: 1px;
+}
+.osu-search-results-url {
+	margin-bottom: 1em;
+}
+#querystats {
+	text-align: right;
+	margin-bottom: 10px;
+	font-style: oblique;
+	color: #999;
+}
+#edit-where-3-wrapper
+{
+	margin-left: 10px;
+}
