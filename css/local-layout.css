@@ -804,7 +804,7 @@ ul.pager li a {
 	margin-bottom: 1px;
 }
 .osu-search-result-url {
-	margin-bottom: 1em;
+	margin-bottom: 10px !important;
 }
 .osu-search-result-title {
 	font-size: 13.5px;
@@ -813,7 +813,6 @@ ul.pager li a {
 	text-align: right;
 	margin-bottom: 10px;
 	font-style: oblique;
-	color: #999;
 }
 #edit-where-3-wrapper
 {

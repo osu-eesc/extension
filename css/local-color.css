@@ -460,3 +460,9 @@ ul.pager a.views-throbbing {
 		background-position: 130px 0px;
 	}
 }
+#querystats {
+	color: #999;
+}
+.osu-search-result-url {
+	color: #888;
+}
