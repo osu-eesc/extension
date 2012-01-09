@@ -1,8 +1,8 @@
 <?php
 // $Id: page.tpl.php,v 1.1.2.5 2010/01/11 00:09:05 sociotech Exp $
-if ($logo == $base_path.$directory.'/logo.png')
+if ($logo == $base_path . $directory.'/logo.png')
 {
-	$logo = $base_path.$directory.'/logo.jpg';
+	$logo = $base_path . $directory.'/logo.jpg';
 }
 $body_classes .= ' site-type-'.variable_get('extension_settings_site_type', 0);
 ?>
@@ -27,24 +27,6 @@ $body_classes .= ' site-type-'.variable_get('extension_settings_site_type', 0);
   </head>
 
   <body id="<?php print $body_id; ?>" class="<?php print $body_classes; ?>">
-    <!--[if lte IE 6]>
-      <div id="ie6warning"></div>
-      <script type="text/javascript">
-        if (document.cookie.indexOf('ie6ignore') < 0) {
-          if (document.cookie.indexOf('ie6first') < 0) {
-            $('#ie6warning').slideDown();
-            document.cookie = escape('ie6first') + '=' + escape('true');
-          } else {
-            document.getElementById('ie6warning').style.display = 'block';
-          }
-          document.getElementById('ie6warning').innerHTML = '<a href="#" id="ie6close">x</a><div class="ie6wbox"><div><b>NOTICE:</b> Your version of Internet Explorer is out of date, and may have trouble displaying content on this site correctly. Please consider upgrading to one of these newer browsers:<br/><a target="_blank" href="http://windows.microsoft.com/en-US/internet-explorer/downloads/ie">Internet Explorer 8</a> | <a target="_blank" href="http://www.mozilla.com/en-US/firefox/new/">Firefox</a> | <a target="_blank" href="http://www.google.com/chrome">Google Chrome</a> | <a target="_blank" href="http://www.apple.com/safari/">Safari</a> | <a target="_blank" href="http://www.opera.com/">Opera</a></div></div>';
-          document.getElementById('ie6close').onclick = function() {
-            $('#ie6warning').slideUp();
-            document.cookie = escape('ie6ignore') + '=' + escape('true');
-          }
-        }
-      </script>
-    <![endif]-->
     <?php
       if (stristr($body_classes, 'first-main-last') != FALSE) {
         $sidebar_last_width = 'grid16-4';
@@ -92,7 +74,7 @@ $body_classes .= ' site-type-'.variable_get('extension_settings_site_type', 0);
                 <div id="header-site-info" class="header-site-info block">
                   <div id="header-site-info-inner" class="header-site-info-inner inner clearfix">
                     <a id="logo" title="<?php print (variable_get('extension_settings_banner_title', 0) && variable_get('extension_settings_banner_title', 0) != '' ? variable_get('extension_settings_banner_link', 0) : $site_name); ?>" href="<?php print (variable_get('extension_settings_banner_link', 0) && variable_get('extension_settings_banner_link', 0) != '' ? variable_get('extension_settings_banner_link', 0) : check_url($front_page)); ?>">
-                    	<img src="<?php print $logo;?>">
+                    	<img src="<?php print $logo; ?>" alt="<?php print $site_name; ?> banner image" height="92" width="960" />
                     </a><!-- /logo -->
                   </div><!-- /header-site-info-inner *** newly added closing tag ****-->
                 </div><!-- /header-site-info -->
@@ -109,39 +91,39 @@ $body_classes .= ' site-type-'.variable_get('extension_settings_site_type', 0);
                 <?php  // add either extension or AES menu or if custom the primary links menu
                   switch (variable_get('extension_settings_site_type', 0)) {
                   case 0: // main extension site
-                    $thisServerPath = variable_get('extension_settings_server_path', '/www/virtual/');
+                    $this_server_path = variable_get('extension_settings_server_path', '/www/virtual/');
                     $filename = 'primary_links_menu_main.inc';
-                    $server_path_file_name = $thisServerPath . '/_includes/primary_menu_includes/' . $filename;
+                    $server_path_file_name = $this_server_path . '/_includes/primary_menu_includes/' . $filename;
                     if (file_exists($server_path_file_name)) {
                       include_once($server_path_file_name);
                     }
 					else {
-	                      include_once( './sites/default/themes/extension/primary_links_menu.html');
+	                      include_once( 'primary_links_menu.html');
 					}
                     break;
                   case 1: // county site
-                    $thisServerPath = variable_get('extension_settings_server_path', '/www/virtual/');
+                    $this_server_path = variable_get('extension_settings_server_path', '/www/virtual/');
                     $filename = 'primary_links_menu_county.inc';
-                    $server_path_file_name = $thisServerPath . '/_includes/primary_menu_includes/' . $filename;
+                    $server_path_file_name = $this_server_path . '/_includes/primary_menu_includes/' . $filename;
                     if (file_exists($server_path_file_name)) {
                       include_once($server_path_file_name);
                     }
 					else {
-						include_once( './sites/default/themes/extension/primary_links_menu.html');
+						include_once( 'primary_links_menu.html');
 					}
                     break;
                   case 2: // branch station
-                    $thisServerPath = variable_get('extension_settings_server_path', '/www/virtual/');
+                    $this_server_path = variable_get('extension_settings_server_path', '/www/virtual/');
                     $filename = 'primary_links_aes_menu_branch.inc';
-                    $server_path_file_name = $thisServerPath . '/_includes/primary_menu_includes/' . $filename;
+                    $server_path_file_name = $this_server_path . '/_includes/primary_menu_includes/' . $filename;
                     if (file_exists($server_path_file_name)) {
                       include_once($server_path_file_name);
                     }
                     break;
                   case 3: // combined site
-                    $thisServerPath = variable_get('extension_settings_server_path', '/www/virtual/');
+                    $this_server_path = variable_get('extension_settings_server_path', '/www/virtual/');
                     $filename = 'primary_links_menu_combined.inc';
-                    $server_path_file_name = $thisServerPath . '/_includes/primary_menu_includes/' . $filename;
+                    $server_path_file_name = $this_server_path . '/_includes/primary_menu_includes/' . $filename;
                     if (file_exists($server_path_file_name)) {
                       include_once($server_path_file_name);
                     }
@@ -150,7 +132,7 @@ $body_classes .= ' site-type-'.variable_get('extension_settings_site_type', 0);
                     print theme('grid_block', $primary_links_tree, 'primary-menu');
                     break;
                   default: // use extension links
-                    $server_path_file_name =  './sites/default/themes/extension/primary_links_menu.html';
+                    $server_path_file_name =  'primary_links_menu.html';
                     if (file_exists($server_path_file_name)) {
                       include_once($server_path_file_name);
                     }
@@ -296,7 +278,14 @@ $body_classes .= ' site-type-'.variable_get('extension_settings_site_type', 0);
           <div id="footer-message-inner" class="footer-message-inner inner clearfix">
             <div style="display: block; float: right; text-align: right; width: 0px; overflow: visible; margin-right: 40px;"><a rel="nofollow" style="color:#666;" href="<?php print $base_path.$log_path; ?>"><?php print $log_print; ?></a></div>
             <div style="display: inline; width: 100%; margin: auto; text-align: center;">
-              <span><a href="http://oregonstate.edu/main/about/copyright">Copyright</a> &copy; 1995-<?php print date(Y);?> <a href="http://oregonstate.edu">Oregon State University</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://oregonstate.edu/main/about/disclaimer/">Web Disclaimer</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://extension.oregonstate.edu/node/3299">Equal Opportunity&#47;Accessibility</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="<?php print variable_get('extension_settings_webmaster_link', 'http://extension.oregonstate.edu/employee/extension-webmaster');?>">Contact the Webmaster</a></span><br/></span></div>
+              <span>
+                <a href="http://oregonstate.edu/main/about/copyright">Copyright</a> &copy; 1995-<?php print date(Y);?> 
+                <a href="http://oregonstate.edu">Oregon State University</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="http://oregonstate.edu/main/about/disclaimer/">Web Disclaimer</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="http://extension.oregonstate.edu/node/3299">Equal Opportunity&#47;Accessibility</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="<?php print variable_get('extension_settings_webmaster_link', 'http://extension.oregonstate.edu/employee/extension-webmaster');?>">Contact the Webmaster</a>
+              </span>
+            </div>
 
               <?php //print theme('grid_block', $footer_message, 'footer-message-text'); ?>
             </div><!-- /footer-message-inner -->
@@ -305,7 +294,8 @@ $body_classes .= ' site-type-'.variable_get('extension_settings_site_type', 0);
 
       </div><!-- /page-inner -->
     </div><!-- /page -->
+    
+    <?php print $closure; ?>
 
-    <?php print str_replace('/sites/default/modules/google_cse/google_cse.js', '/sites/default/themes/extension/js/google_cse_override.js', $closure); ?>
   </body>
 </html>
