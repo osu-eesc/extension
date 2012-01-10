@@ -764,56 +764,44 @@ ul.pager li a {
 
 /* OSU Search (mark up from cws themes) */
 #osu-search {
-	float:right;
-	margin-right: 10px;
+	float: right;
 }
 
-#osu-search-query-wrapper, #osu-search-query, #osu-search-submit {
-	display:inline;
-	margin:0;
-	float:left;
+#osu-search-query-wrapper, #osu-search-scope-wrapper {
+	display: inline;
 }
 
-#osu-search-scope-wrapper {
-	display:none;
-}
+#osu-search form input.form-submit {
+  border: none;
+  background: url('../images/search-icon.png') scroll no-repeat;
+  margin-top: 1.5em;
+  padding-right: 1.5em;
+} 
 
-#osu-search-submit {
-  width: 22px;
-  height: 22px;
-}
 #header-top-region-wrapper {
 	float: left;
 	min-width: 700px;
 	width: 700px;
 	overflow: hidden;
 }
-#osu-search {
-	margin-top: 15px;
-}
-#osu-search-submit {
-	margin: 1px auto auto 7px;
-}
-#osu-search-form #edit-submit {
-  margin-top: -65px;
-  display: block;
-  margin-left: 340px;
-  margin-bottom: 45px;
-}
+
 #results dd {
 	margin-bottom: 1px;
 }
 .osu-search-result-url {
 	margin-bottom: 14px !important;
 }
+
 .osu-search-result-title {
 	font-size: 13.5px;
 }
+
 #querystats {
 	text-align: right;
 	margin-bottom: 10px;
 	font-style: oblique;
 }
+
 #edit-where-3-wrapper
 {
 	margin-left: 10px;

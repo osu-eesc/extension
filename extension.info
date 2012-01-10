@@ -23,6 +23,7 @@ stylesheets[print][] = css/print.css
 
 scripts[] = js/jquery.corner.js
 scripts[] = js/acquia-prosper-script.js
+scripts[] = js/osu-search.js
 
 regions[sidebar_first] = sidebar first
 regions[sidebar_last] = sidebar last

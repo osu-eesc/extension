@@ -439,27 +439,16 @@ ul.pager li a:hover {
 ul.pager a.views-throbbing {
 	color: #fff !important;
 }
-#osu-search
-{
-	background: url('../images/search-icon.png') scroll no-repeat 140px 0px;
+
+/* OSU Search */
+#osu-search-query-wrapper.form-item input#osu-search-query.form-text {
+  border: 1px solid #D85A1A;
+  color: #999999;
+  font-style: oblique;
+  outline: medium none;
+  width: 130px !important;
 }
-#osu-search-submit
-{
-	border: none;
-	background: none;
-	opacity: 0;
-}
-#osu-search-query:focus
-{
-	outline: none;
-	border: 1px solid #d85a1a;
-	padding: 4px 3px;
-}
-@-moz-document url-prefix() {
-  #osu-search {
-		background-position: 130px 0px;
-	}
-}
+
 #querystats {
 	color: #999;
 }
