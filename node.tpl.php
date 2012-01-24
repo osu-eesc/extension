@@ -10,11 +10,6 @@
     <h2 class="title"><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title ?></a></h2>
     <?php endif; ?>
   
-    <?php if ($submitted): ?>
-    <div class="meta">
-      <span class="submitted"><?php print $submitted ?></span>
-    </div>
-    <?php endif; ?>
   
     <?php if ($node_top && !$teaser): ?>
     <div id="node-top" class="node-top row nested">
@@ -29,9 +24,9 @@
     </div>
   
     <?php if ($terms): ?>
-    <div class="terms">
+    <!--<div class="terms">-->
       <?php // print $terms; ?>
-    </div>
+    <!--</div>-->
     <?php endif;?>
     
     <?php if ($links): ?>
