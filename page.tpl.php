@@ -284,7 +284,7 @@ $body_classes .= ' site-type-'.variable_get('extension_settings_site_type', 0);
                 <a href="http://oregonstate.edu">Oregon State University</a>&nbsp;&nbsp;|&nbsp;&nbsp;
                 <a href="http://oregonstate.edu/main/about/disclaimer/">Web Disclaimer</a>&nbsp;&nbsp;|&nbsp;&nbsp;
                 <a href="http://extension.oregonstate.edu/node/3299">Equal Opportunity&#47;Accessibility</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                <a href="<?php print variable_get('extension_settings_webmaster_link', 'http://extension.oregonstate.edu/employee/extension-webmaster');?>">Contact the Webmaster</a>
+                <a href="<?php print variable_get('extension_settings_webmaster_link', 'http://extension.oregonstate.edu/employee/extension-webmaster');?>">Contact Us</a>
               </span>
             </div>
 
