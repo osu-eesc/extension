@@ -191,13 +191,11 @@ blockquote {
 
 #content-right {
   float: right;
-  margin-left: 10px;
 }
 
-#content-right .block {
-  margin-bottom: 10px;
+#content-right-inner {
+  padding: 0 0 15px 15px;
 }
-
 
 /* overide fusion no gutters for blocks in content region */
 #preface-top-wrapper {
