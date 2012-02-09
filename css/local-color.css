@@ -230,9 +230,14 @@ a {
 #sidebar-last .block {
 	background: url('../images/extension/gif/lay_ilr_horr.gif') bottom left no-repeat;
 }
-#sidebar-first .block.last, #sidebar-last .block.last {
-	background: none;
+
+
+#sidebar-last .block.last .block-menu ul.menu {
+	background: url('../images/extension/gif/lay_ilr_horr.gif') bottom left no-repeat;
+	padding-bottom: 38px;
 }
+
+
 .block-border-fade-top {
 	background: transparent url('../images/extension/png/lay_ilr_hor.png') top repeat-x !important;
 }

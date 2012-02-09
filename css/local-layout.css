@@ -297,9 +297,6 @@ div.content-messages-inner div.status {
 	margin:auto; /* status updates */
 	max-width:885px;
 }
-#block-user-1 {
-	margin-top: 1em;
-}
 
 /* Home page
 /-------------------------------------------------------------- */
@@ -367,9 +364,12 @@ body.node-type-news-issue .content-group row nested grid16-6 {
 	padding-bottom: 38px;
 }
 #sidebar-first .block.last, 
-#sidebar-last .block.last {
+
+/* commented this as it messes with context blocks
+  #sidebar-last .block.last {
 	padding-bottom: 6px !important;
-}
+}*/
+
 #sidebar-first .block > div {
 	margin-left: 20px !important;
 }
