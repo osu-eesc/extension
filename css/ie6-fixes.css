@@ -264,11 +264,17 @@ ul.pager li.pager-item a:visited {
 	top: 0px !important;
 	left: 0px !important;
 }
-#header-top-region #block-block-12 {
-	width: 490px;
+#header-top-region #block-block-12,
+#header-top-region #block-extension_settings-5 {
+	width: 520px;
 	float: left;
 }
-#header-top-region #block-google_cse-0 {
+#header-top-inner #osu-search {
+  width: 360px;
+	float: right;
+}
+#header-top-region #block-google_cse-0,
+#header-top-inner #osu-search {
 	width: 360px;
 	float: right;
 }

@@ -60,6 +60,12 @@ settings[theme_font_size] = font-size-12
 settings[sidebar_layout] = sidebars-split
 settings[sidebar_first_width] = 4
 settings[sidebar_last_width] = 5
+settings[search_info_type] = 0
+settings[search_info_user] = 0
+settings[search_info_date] = 0
+settings[search_info_comment] = 0
+settings[search_info_upload] = 0
+settings[block_config_link] = 1
 
 ; Inherit Skinr styles from parent themes
 skinr[options][inherit_skins] = true
