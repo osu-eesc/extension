@@ -802,3 +802,7 @@ ul.pager li a {
 {
 	margin-left: 10px;
 }
+
+#edit-field-pictures-0-upload-wrapper.form-item {
+  white-space: normal !important;
+}
