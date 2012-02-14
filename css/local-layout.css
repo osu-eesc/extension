@@ -803,6 +803,6 @@ ul.pager li a {
 	margin-left: 10px;
 }
 
-#edit-field-pictures-0-upload-wrapper.form-item {
+#edit-field-pictures-0-data-alt-wrapper.form-item div.description {
   white-space: normal !important;
 }
