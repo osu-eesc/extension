@@ -4,7 +4,10 @@ if ($logo == $base_path . $directory.'/logo.png')
 {
 	$logo = $base_path . $directory.'/logo.jpg';
 }
-$body_classes .= ' site-type-'.variable_get('extension_settings_site_type', 0);
+
+$site_type = variable_get('extension_settings_site_type', 0);
+ 
+$body_classes .= ' site-type-' . $site_type;
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -16,7 +19,6 @@ $body_classes .= ' site-type-'.variable_get('extension_settings_site_type', 0);
     <?php print $styles; ?>
     <?php print $setting_styles; ?>
 		 <?php print $local_styles; ?>
-		 <link href="/sites/default/themes/extension/css/special.css" rel="stylesheet"/>
     <!--[if IE 8]>
       <?php print $ie8_styles; ?>
     <![endif]-->
@@ -29,17 +31,27 @@ $body_classes .= ' site-type-'.variable_get('extension_settings_site_type', 0);
 
   <body id="<?php print $body_id; ?>" class="<?php print $body_classes; ?>">
     <?php
-      if (stristr($body_classes, 'first-main-last') != FALSE) {
-        $sidebar_last_width = 'grid16-4';
-        $sidebar_first_width = 'grid16-4';
-      } else if (stristr($body_classes, 'not-front') == FALSE && (variable_get('extension_settings_site_type', 0) == 0 && stristr(variable_get('extension_settings_sitename', 0), 'Extension News') == FALSE)) {
-        $sidebar_last_width = 'grid16-6';
-      } else if (stristr($body_classes, 'not-front') == FALSE && (variable_get('extension_settings_site_type', 0) != 0 || stristr(variable_get('extension_settings_sitename', 0), 'Extension News') != FALSE)) {
-        $sidebar_last_width = 'grid16-5';
-      }
+
+      switch ($site_type) {
+        case 0: // main extension site
+          if ($is_front) {
+            $sidebar_last_width = 'grid16-6';
+          }
+        break;
+        case 6: // main outreach site
+          if ($is_front) {
+            $sidebar_last_width = 'grid16-6';
+          }
+        break;
+        default:
+          $sidebar_last_width = 'grid16-5';
+        }
+        
       $content_group_width = 'grid16-'.(substr($grid_width, 7) - (substr($sidebar_first_width, 7) + substr($sidebar_last_width, 7)));
       $main_group_width = 'grid16-'.(substr($grid_width, 7) - substr($sidebar_first_width, 7));
+      
     ?>
+    
     <div id="page" class="page">
       <div id="page-inner" class="page-inner">
         <div id="skip">
@@ -88,55 +100,75 @@ $body_classes .= ' site-type-'.variable_get('extension_settings_site_type', 0);
           <!-- primary-menu row: width = grid_width -->
           <div id="header-primary-menu-wrapper" class="header-primary-menu-wrapper full-width">
             <div id="header-primary-menu" class="header-primary-menu row <?php print $grid_width; ?>">
-              <div id="header-primary-menu-inner" class="header-primary-menu-inner inner <?php if (variable_get('extension_settings_site_type', 0) == 0 && stristr(theme('grid_row', $preface_top, 'preface-top', 'full-width', $grid_width), '<div') != FALSE) { print 'ext-home-special ';} ?>clearfix">
-                <?php  // add either extension or AES menu or if custom the primary links menu
-                  switch (variable_get('extension_settings_site_type', 0)) {
-                  case 0: // main extension site
-                    $this_server_path = variable_get('extension_settings_server_path', '/www/virtual/');
-                    $filename = 'primary_links_menu_main.inc';
-                    $server_path_file_name = $this_server_path . '/_includes/primary_menu_includes/' . $filename;
-                    if (file_exists($server_path_file_name)) {
-                      include_once($server_path_file_name);
-                    }
-					else {
+              <div id="header-primary-menu-inner" class="header-primary-menu-inner inner <?php if ( ($site_type == 0 || $site_type == 6) && $is_front && stristr(theme('grid_row', $preface_top, 'preface-top', 'full-width', $grid_width), '<div') != FALSE) { print 'ext-home-special ';} ?>clearfix">
+                <?php  
+                  //add primary links menu. Main Extension, Main O&E and Custom sites use actual primary links, other use pre-generated menus
+                  $this_server_path = variable_get('extension_settings_server_path', '/www/virtual/');
+                  switch ($site_type) {
+                    case 0: // main extension site
+                      print theme('grid_block', $primary_links_tree, 'primary-menu');
+                    break;
+                    case 1: // county site
+                      $filename = 'primary_links_menu_county.inc';
+                      $server_path_file_name = $this_server_path . '/_includes/primary_menu_includes/' . $filename;
+                      if (file_exists($server_path_file_name)) {
+                        include_once($server_path_file_name);
+                      }
+					            else {
+						            include_once( 'primary_links_menu.html');
+					            }
+                    break;
+                    case 2: // branch station
+                      $filename = 'primary_links_aes_menu_branch.inc';
+                      $server_path_file_name = $this_server_path . '/_includes/primary_menu_includes/' . $filename;
+                      if (file_exists($server_path_file_name)) {
+                        include_once($server_path_file_name);
+                      }
+                      else {
+						            include_once( 'primary_links_menu.html');
+					            }
+                    break;
+                    case 3: // combined site
+                      $filename = 'primary_links_menu_combined.inc';
+                      $server_path_file_name = $this_server_path . '/_includes/primary_menu_includes/' . $filename;
+                      if (file_exists($server_path_file_name)) {
+                        include_once($server_path_file_name);
+                      }
+                      else {
+						            include_once( 'primary_links_menu.html');
+					            }
+                    break;
+                    case 4: // custom - 
+                      print theme('grid_block', $primary_links_tree, 'primary-menu');
+                    break;
+                    case 5: // program area site
+                      $filename = 'primary_links_menu_main.inc';
+                      $server_path_file_name = $this_server_path . '/_includes/primary_menu_includes/' . $filename;
+                      if (file_exists($server_path_file_name)) {
+                        include_once($server_path_file_name);
+                      }
+					            else {
 	                      include_once( 'primary_links_menu.html');
-					}
+					            }
                     break;
-                  case 1: // county site
-                    $this_server_path = variable_get('extension_settings_server_path', '/www/virtual/');
-                    $filename = 'primary_links_menu_county.inc';
-                    $server_path_file_name = $this_server_path . '/_includes/primary_menu_includes/' . $filename;
-                    if (file_exists($server_path_file_name)) {
-                      include_once($server_path_file_name);
-                    }
-					else {
-						include_once( 'primary_links_menu.html');
-					}
+                    case 6: // main O and E site
+                      print theme('grid_block', $primary_links_tree, 'primary-menu');
                     break;
-                  case 2: // branch station
-                    $this_server_path = variable_get('extension_settings_server_path', '/www/virtual/');
-                    $filename = 'primary_links_aes_menu_branch.inc';
-                    $server_path_file_name = $this_server_path . '/_includes/primary_menu_includes/' . $filename;
-                    if (file_exists($server_path_file_name)) {
-                      include_once($server_path_file_name);
-                    }
+                    case 7: // other OE sites
+                      $filename = 'primary_links_menu_main.inc';
+                      $server_path_file_name = $this_server_path . '/_includes/primary_menu_includes/' . $filename;
+                      if (file_exists($server_path_file_name)) {
+                        include_once($server_path_file_name);
+                      }
+					            else {
+	                      include_once( 'primary_links_menu.html');
+					            }
                     break;
-                  case 3: // combined site
-                    $this_server_path = variable_get('extension_settings_server_path', '/www/virtual/');
-                    $filename = 'primary_links_menu_combined.inc';
-                    $server_path_file_name = $this_server_path . '/_includes/primary_menu_includes/' . $filename;
-                    if (file_exists($server_path_file_name)) {
-                      include_once($server_path_file_name);
-                    }
-                    break;
-                  case 4: // custom
-                    print theme('grid_block', $primary_links_tree, 'primary-menu');
-                    break;
-                  default: // use extension links
-                    $server_path_file_name =  'primary_links_menu.html';
-                    if (file_exists($server_path_file_name)) {
-                      include_once($server_path_file_name);
-                    }
+                    default: // use extension links
+                      $server_path_file_name =  'primary_links_menu.html';
+                      if (file_exists($server_path_file_name)) {
+                        include_once($server_path_file_name);
+                      }
                     break;
                   }
                 ?>
