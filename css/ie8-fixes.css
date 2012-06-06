@@ -42,3 +42,6 @@
 #block-views-homepage_slideshow-block_1 .views-slideshow-controls-bottom {
 	margin-top: -30px;
 }
+#osu-search-query-wrapper #osu-search-query {
+	width:auto;
+}

@@ -269,15 +269,6 @@ ul.pager li.pager-item a:visited {
 	width: 520px;
 	float: left;
 }
-#header-top-inner #osu-search {
-  width: 360px;
-	float: right;
-}
-#header-top-region #block-google_cse-0,
-#header-top-inner #osu-search {
-	width: 360px;
-	float: right;
-}
 #content-content #edit-query {
 	border: 1px solid #D85A1A !important;
 	width: 218px !important;
@@ -383,4 +374,8 @@ div.dotted-line {
 }
 #edit-submit-enews {
 	margin-top: 20px;
+}
+
+#osu-search {
+	width: 165px;
 }
