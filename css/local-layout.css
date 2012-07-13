@@ -784,13 +784,14 @@ ul.pager li a {
   float:right;
 } 
 
+/*  removed this as it was creating issues for google-cse
 #header-top-region-wrapper {
 	float: left;
 	min-width: 700px;
 	width: 700px;
 	overflow: hidden;
 }
-
+*/
 #osu-search-query {
 	width:130px;
 }

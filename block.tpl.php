@@ -14,7 +14,7 @@
       <?php 
 				if (stristr($block->content, 'google-cse-searchbox-form') != FALSE)
 				{
-				 print str_replace('type="submit"', 'type="image" src="/sites/default/themes/extension/images/search-icon.png"', $block->content);
+				 print str_replace('type="submit"', 'type="image" src="http://extension.oregonstate.edu/sites/default/themes/extension/images/search-icon.png"', $block->content);
 				}
 				else
 				{

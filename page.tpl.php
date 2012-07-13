@@ -70,9 +70,11 @@ $body_classes .= ' site-type-' . $site_type;
 
               <?php print theme('grid_row', $header_top, 'header-top-region', 'full-width', $grid_width); ?>
               
-              <div id="osu-search"> <!-- cws search form -->
-             	  <?php echo $osu_search_form; ?>
-             	</div>
+              <?php if (module_exists('osu_search')): ?>
+                <div id="osu-search"> <!-- cws search form -->
+             	    <?php print $osu_search_form; ?>
+             	  </div>
+             	<?php endif; ?>
               
             </div><!-- /header-top-inner -->
           </div><!-- /header-top -->
