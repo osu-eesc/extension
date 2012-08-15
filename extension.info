@@ -24,6 +24,7 @@ stylesheets[print][] = css/print.css
 scripts[] = js/jquery.corner.js
 scripts[] = js/acquia-prosper-script.js
 scripts[] = js/osu-search.js
+scripts[] = js/google_cse_override.js
 
 regions[sidebar_first] = sidebar first
 regions[sidebar_last] = sidebar last
@@ -126,7 +127,7 @@ skinr[prosper-common-styles][features][] = views_view
 skinr[prosper-common-styles][options][1][label] = <span class="preview-text">Gray border around image <span class="preview-icon" id="prosper-gray-border-image-skinrpreview"></span></span>
 skinr[prosper-common-styles][options][1][class] = prosper-gray-border-image
 ; Information added by drupal.org packaging script on 2010-09-17
-version = "6.x-1.3"
+version = "6.x-1.4"
 core = "6.x"
 project = "acquia_prosper"
 datestamp = "1284760858"

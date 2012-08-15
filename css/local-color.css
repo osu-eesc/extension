@@ -459,3 +459,7 @@ ul.pager a.views-throbbing {
 .osu-search-result-url {
 	color: #888 !important;
 }
+
+#google-cse-searchbox-form input.form-text {
+  background-color: #fff;
+}
