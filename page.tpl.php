@@ -158,7 +158,7 @@ $body_classes .= ' site-type-' . $site_type;
                       print theme('grid_block', $primary_links_tree, 'primary-menu');
                     break;
                     case 5: // program area site
-                      $filename = 'primary_links_menu_main.inc';
+                      $filename = 'primary_links_menu_program.inc';
                       $server_path_file_name = $this_server_path . '/_includes/primary_menu_includes/' . $filename;
                       if (file_exists($server_path_file_name)) {
                         include_once($server_path_file_name);
@@ -171,14 +171,7 @@ $body_classes .= ' site-type-' . $site_type;
                       print theme('grid_block', $primary_links_tree, 'primary-menu');
                     break;
                     case 7: // other OE sites
-                      $filename = 'primary_links_menu_main.inc';
-                      $server_path_file_name = $this_server_path . '/_includes/primary_menu_includes/' . $filename;
-                      if (file_exists($server_path_file_name)) {
-                        include_once($server_path_file_name);
-                      }
-					            else {
-	                      include_once( 'primary_links_menu.html');
-					            }
+                      print theme('grid_block', $primary_links_tree, 'primary-menu');
                     break;
                     default: // use extension links
                       $server_path_file_name =  'primary_links_menu.html';
