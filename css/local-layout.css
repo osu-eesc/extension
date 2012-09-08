@@ -758,61 +758,6 @@ ul.pager li a {
 	width: 20px !important;
 }
 
-/* OSU Search (mark up from cws themes) */
-#osu-search {
-	float: right;
-	padding: 13px 0 0 0;
-	max-width:170px;
-}
-
-#osu-search-query-wrapper, #osu-search-scope-wrapper {
-	display: inline;
-}
-
-#osu-search-query-wrapper {
-	float:left;
-	margin:0;
-}
-
-#osu-search form input.form-submit {
-  border: none;
-  background: url('../images/search-icon.png') scroll no-repeat;
-  padding:0;
-  height:22px;
-  width:22px;
-  margin:0 0px 0 5px;
-  float:right;
-} 
-
-/*  removed this as it was creating issues for google-cse
-#header-top-region-wrapper {
-	float: left;
-	min-width: 700px;
-	width: 700px;
-	overflow: hidden;
-}
-*/
-#osu-search-query {
-	width:130px;
-}
-
-#results dd {
-	margin-bottom: 1px;
-}
-.osu-search-result-url {
-	margin-bottom: 14px !important;
-}
-
-.osu-search-result-title {
-	font-size: 13.5px;
-}
-
-#querystats {
-	text-align: right;
-	margin-bottom: 10px;
-	font-style: oblique;
-}
-
 #edit-where-3-wrapper
 {
 	margin-left: 10px;
