@@ -766,3 +766,9 @@ ul.pager li a {
 .form-item div.description {
   white-space: normal !important;
 }
+
+/* remove borders on book navigation */
+.book-navigation .page-links {
+  border-top: none;
+  border-bottom: none;
+}
