@@ -4,6 +4,7 @@ name = Extension
 description = Extension is a clone of the Acquia Prosper theme. Requires the <a href="http://drupal.org/project/fusion">Fusion Core</a> base theme and the <a href="http://drupal.org/project/skinr">Skinr</a> module.
 base theme = fusion_core
 core = 6.x
+version = "6.x-1.5"
 engine = phptemplate
 
 stylesheets[all][] = css/acquia-prosper-style.css
@@ -126,8 +127,3 @@ skinr[prosper-common-styles][features][] = panels_panel
 skinr[prosper-common-styles][features][] = views_view
 skinr[prosper-common-styles][options][1][label] = <span class="preview-text">Gray border around image <span class="preview-icon" id="prosper-gray-border-image-skinrpreview"></span></span>
 skinr[prosper-common-styles][options][1][class] = prosper-gray-border-image
-; Information added by drupal.org packaging script on 2010-09-17
-version = "6.x-1.4"
-core = "6.x"
-project = "acquia_prosper"
-datestamp = "1284760858"
