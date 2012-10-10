@@ -17,19 +17,6 @@ $body_classes .= ' site-type-' . $site_type;
     <title><?php print $head_title; ?></title>
     <?php print $head; ?>
     
-    <?php if (module_exists('jplayer_block')): // load newer version of jquery and set noConfict for jplayer ?>
-      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
-      
-      <script type="text/javascript">
-        var nuJQ = jQuery.noConflict();
-      </script>
-      
-      <?php $jplayer_path = $base_path . drupal_get_path('module', 'jplayer_block') . '/js/jquery.jplayer.min.js'; ?>
-
-      <script type="text/javascript" src="<?php print $jplayer_path; ?>"></script>
-     
-   	<?php endif; ?>
-    
     <?php print $styles; ?>
     <?php print $setting_styles; ?>
 		 <?php print $local_styles; ?>
