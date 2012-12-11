@@ -31,11 +31,6 @@
     <!--</div>-->
     <?php endif;?>
     
-    <?php if ($links): ?>
-    <div class="links">
-      <?php print $links; ?>
-    </div>
-    <?php endif; ?>
   </div><!-- /inner -->
 
   <?php if ($node_bottom && !$teaser): ?>

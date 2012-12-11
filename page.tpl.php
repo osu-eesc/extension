@@ -254,6 +254,13 @@ $body_classes .= ' site-type-' . $site_type;
                               }
                               print $raw;
                             ?>
+
+														<?php if ($node->links): ?>
+												    <div class="node links">
+												      <?php print theme_links($node->links); ?>
+												    </div>
+												    <?php endif; ?>
+												
                           </div><!-- /content-group-inner -->
                         </div><!-- /content-group -->
                       <?php
