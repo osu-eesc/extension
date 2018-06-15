@@ -5,22 +5,22 @@
 
 @font-face {
     font-family: 'EksjaExtremesThin';
-    src: url(http://oregonstate.edu/osuhomepage/css/fonts/Eksja/Eksja-thin-webfont.eot);
-    src: local('☺'), url(http://oregonstate.edu/osuhomepage/css/fonts/Eksja/Eksja-thin-webfont.woff) format('woff'), url(http://oregonstate.edu/osuhomepage/css/fonts/Eksja/Eksja-thin-webfont.ttf) format('truetype'), url(http://oregonstate.edu/osuhomepage/css/fonts/Eksja/Eksja-thin-webfont.svg#webfont) format('svg');
+    src: url(https://oregonstate.edu/osuhomepage/css/fonts/Eksja/Eksja-thin-webfont.eot);
+    src: local('☺'), url(https://oregonstate.edu/osuhomepage/css/fonts/Eksja/Eksja-thin-webfont.woff) format('woff'), url(https://oregonstate.edu/osuhomepage/css/fonts/Eksja/Eksja-thin-webfont.ttf) format('truetype'), url(https://oregonstate.edu/osuhomepage/css/fonts/Eksja/Eksja-thin-webfont.svg#webfont) format('svg');
     font-weight: 800;
     font-style: normal;
 }
 @font-face {
     font-family: 'EksjaExtremesRegular';
-    src: url(http://oregonstate.edu/osuhomepage/css/fonts/Eksja/Eksja-regular-webfont.eot);
-    src: local('☺'), url(http://oregonstate.edu/osuhomepage/css/fonts/Eksja/Eksja-regular-webfont.woff) format('woff'), url(http://oregonstate.edu/osuhomepage/css/fonts/Eksja/Eksja-regular-webfont.ttf) format('truetype'), url(http://oregonstate.edu/osuhomepage/css/fonts/Eksja/Eksja-regular-webfont.svg#webfont) format('svg');
+    src: url(https://oregonstate.edu/osuhomepage/css/fonts/Eksja/Eksja-regular-webfont.eot);
+    src: local('☺'), url(https://oregonstate.edu/osuhomepage/css/fonts/Eksja/Eksja-regular-webfont.woff) format('woff'), url(https://oregonstate.edu/osuhomepage/css/fonts/Eksja/Eksja-regular-webfont.ttf) format('truetype'), url(https://oregonstate.edu/osuhomepage/css/fonts/Eksja/Eksja-regular-webfont.svg#webfont) format('svg');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'EksjaExtremesBold';
-    src: url(http://oregonstate.edu/osuhomepage/css/fonts/Eksja/Eksja-bold-webfont.eot);
-    src: local('☺'), url(http://oregonstate.edu/osuhomepage/css/fonts/Eksja/Eksja-bold-webfont.woff) format('woff'), url(http://oregonstate.edu/osuhomepage/css/fonts/Eksja/Eksja-bold-webfont.ttf) format('truetype'), url(http://oregonstate.edu/osuhomepage/css/fonts/Eksja/Eksja-bold-webfont.svg#webfont) format('svg');
+    src: url(https://oregonstate.edu/osuhomepage/css/fonts/Eksja/Eksja-bold-webfont.eot);
+    src: local('☺'), url(https://oregonstate.edu/osuhomepage/css/fonts/Eksja/Eksja-bold-webfont.woff) format('woff'), url(https://oregonstate.edu/osuhomepage/css/fonts/Eksja/Eksja-bold-webfont.ttf) format('truetype'), url(https://oregonstate.edu/osuhomepage/css/fonts/Eksja/Eksja-bold-webfont.svg#webfont) format('svg');
     font-weight: normal;
     font-style: normal;
 }
